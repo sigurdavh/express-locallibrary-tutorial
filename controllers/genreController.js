@@ -8,7 +8,7 @@ const genre = require("../models/genre");
 // Display list of all Genre.
 exports.genre_list = asyncHandler(async (req, res, next) => {
   const allGenre = await Genre.find().sort({ name: 1 }).exec();
-    res.render("Genre_list", {
+    res.render("genre_list", {
       title: "Genre List",
       genre_list: allGenre,
     });
